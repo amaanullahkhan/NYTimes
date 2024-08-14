@@ -53,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		035E49CC2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		035E49D42C6CFD95009E37A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		038CF4B62C6B69A1009C9747 /* NYTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038CF4B92C6B69A1009C9747 /* NYTimesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesApp.swift; sourceTree = "<group>"; };
 		038CF4BB2C6B69A1009C9747 /* ArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		038CF4B82C6B69A1009C9747 /* NYTimes */ = {
 			isa = PBXGroup;
 			children = (
+				035E49D42C6CFD95009E37A7 /* Info.plist */,
 				038CF4E62C6B70E4009C9747 /* Presentation */,
 				038CF4E72C6B70EF009C9747 /* Domain */,
 				038CF4F42C6B977A009C9747 /* Data */,
@@ -623,6 +625,7 @@
 				DEVELOPMENT_TEAM = ASJQMDVLAC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NYTimes/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -656,6 +659,7 @@
 				DEVELOPMENT_TEAM = ASJQMDVLAC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NYTimes/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (

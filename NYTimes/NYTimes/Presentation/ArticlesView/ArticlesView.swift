@@ -14,7 +14,7 @@ struct ArticlesView: View {
     var body: some View {
         NavigationView {
             List(viewModel.articleViewModels) { articleViewModel in
-                NavigationLink(destination: ArticleDetailsView(viewModel: ArticleDetailsViewModel(article: articleViewModel.article))) {
+                NavigationLink(destination: ArticleDetailsView(viewModel: articleViewModel.makeArticleDetailsViewModel())) {
                     ArticleView(viewModel: articleViewModel)
                 }
             }
@@ -24,7 +24,6 @@ struct ArticlesView: View {
         .task {
             viewModel.getArticles()
         }
-        
     }
 }
 

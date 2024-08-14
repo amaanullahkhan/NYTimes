@@ -16,7 +16,7 @@ struct ArticleDetailsView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     
-                    HStack {
+                    HStack(alignment: .top) {
                         Text(viewModel.publishedBy)
                             .font(.subheadline)
                         Text(viewModel.publishDate)
@@ -55,7 +55,7 @@ struct ArticleDetailsView: View {
                         .padding(.horizontal, 8)
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)        
         }
     }
 }

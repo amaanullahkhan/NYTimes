@@ -149,13 +149,13 @@
 		038CF4B82C6B69A1009C9747 /* NYTimes */ = {
 			isa = PBXGroup;
 			children = (
-				035E49D42C6CFD95009E37A7 /* Info.plist */,
 				038CF4E62C6B70E4009C9747 /* Presentation */,
 				038CF4E72C6B70EF009C9747 /* Domain */,
 				038CF4F42C6B977A009C9747 /* Data */,
 				038CF4FC2C6BAD45009C9747 /* Infrastructure */,
 				038CF4BD2C6B69A2009C9747 /* Assets.xcassets */,
 				038CF4C22C6B69A2009C9747 /* NYTimes.entitlements */,
+				035E49D42C6CFD95009E37A7 /* Info.plist */,
 				038CF4BF2C6B69A2009C9747 /* Preview Content */,
 			);
 			path = NYTimes;

@@ -13,26 +13,29 @@ struct ArticleView: View {
     
     var body: some View {
         
-        HStack(alignment: .top) {
+        HStack(alignment: .center) {
             AsyncImage(url: viewModel.imageUrl) { imagePhase in
                 imagePhase.image?.resizable()
             }
             .frame(width: 80, height: 80)
-            .clipShape(RoundedRectangle(cornerRadius: 25.0))
+            .clipShape(RoundedRectangle(cornerRadius: 10.0))
             
             VStack(alignment: .leading) {
                 Text(viewModel.title)
                     .font(.headline)
-                    .lineLimit(1)
-                Text(viewModel.description)
                     .lineLimit(2)
-                    .font(.callout)
-                    .foregroundColor(.secondary)
-                Text(viewModel.publishDate)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .font(.caption)
-                    .foregroundColor(.accentColor)
-                    .lineLimit(1)
+                HStack {
+                    Text(viewModel.publishedBy)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .lineLimit(1)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    Text(viewModel.publishDate)
+                        .font(.caption)
+                        .italic()
+                        .foregroundColor(.accentColor)
+                        .lineLimit(1)
+                }
             }
         }
     }

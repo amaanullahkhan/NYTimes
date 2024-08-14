@@ -12,7 +12,7 @@ struct PopularArticlesRepository: ArticlesRepository {
     
     let networkData: NetworkData
     
-    init(networkData: NetworkData = NetworkData()) {
+    init(networkData: NetworkData = URLSessionNetworkData()) {
         self.networkData = networkData
     }
     

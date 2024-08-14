@@ -8,7 +8,11 @@
 import Foundation
 import Combine
 
-struct NetworkData {
+protocol NetworkData {
+    func fetch<T: Decodable>(from url: URL) -> AnyPublisher<T, Error>
+}
+
+struct URLSessionNetworkData: NetworkData {
     
     private let session: URLSession
     

@@ -14,10 +14,6 @@ final class GetPopularArticlesUseCaseTests: XCTestCase {
     var sut: GetPopularArticlesUseCase?
     var cancellables = Set<AnyCancellable>()
 
-    override func setUpWithError() throws {
-        
-    }
-
     override func tearDownWithError() throws {
         sut = nil
         cancellables = []

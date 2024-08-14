@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035E49CD2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E49CC2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift */; };
 		038CF4BA2C6B69A1009C9747 /* NYTimesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4B92C6B69A1009C9747 /* NYTimesApp.swift */; };
 		038CF4BC2C6B69A1009C9747 /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4BB2C6B69A1009C9747 /* ArticlesView.swift */; };
 		038CF4BE2C6B69A2009C9747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 038CF4BD2C6B69A2009C9747 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035E49CC2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		038CF4B62C6B69A1009C9747 /* NYTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038CF4B92C6B69A1009C9747 /* NYTimesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesApp.swift; sourceTree = "<group>"; };
 		038CF4BB2C6B69A1009C9747 /* ArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		035E49CA2C6CE6F3009E37A7 /* ArticlesViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				038CF5052C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift */,
+				038CF50B2C6BF70A009C9747 /* ArticlesViewModelFailureTest.swift */,
+			);
+			path = ArticlesViewModelTests;
+			sourceTree = "<group>";
+		};
+		035E49CB2C6CE705009E37A7 /* ArticleDetailsViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				035E49CC2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift */,
+			);
+			path = ArticleDetailsViewModelTests;
+			sourceTree = "<group>";
+		};
 		038CF4AD2C6B69A1009C9747 = {
 			isa = PBXGroup;
 			children = (
@@ -251,8 +270,8 @@
 		038CF5012C6BE52E009C9747 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				038CF5052C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift */,
-				038CF50B2C6BF70A009C9747 /* ArticlesViewModelFailureTest.swift */,
+				035E49CA2C6CE6F3009E37A7 /* ArticlesViewModelTests */,
+				035E49CB2C6CE705009E37A7 /* ArticleDetailsViewModelTests */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -440,6 +459,7 @@
 				038CF50A2C6BF528009C9747 /* GetMockedArticlesUseCase.swift in Sources */,
 				03C7298A2C6C82B40061D573 /* MockedArticlesRepository.swift in Sources */,
 				038CF5062C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift in Sources */,
+				035E49CD2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift in Sources */,
 				03C729872C6C81E50061D573 /* GetPopularArticlesUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,10 +613,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NYTimes/NYTimes.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NYTimes/Preview Content\"";
+				DEVELOPMENT_TEAM = ASJQMDVLAC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -607,6 +629,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.NYTimes.NYTimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -622,10 +645,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = NYTimes/NYTimes.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NYTimes/Preview Content\"";
+				DEVELOPMENT_TEAM = ASJQMDVLAC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -636,6 +661,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.NYTimes.NYTimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -652,6 +678,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASJQMDVLAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
@@ -674,6 +701,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASJQMDVLAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
@@ -695,6 +723,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASJQMDVLAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.NYTimes.NYTimesUITests;
@@ -715,6 +744,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ASJQMDVLAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.NYTimes.NYTimesUITests;

@@ -9,6 +9,15 @@ import Foundation
 import Combine
 @testable import NYTimes
 
+struct GetSuccessMockedArticlesUseCase: GetArticlesUseCase {
+    
+    func getArticles() -> AnyPublisher<[Article], Error> {
+        Just(Article.testArticles)
+            .setFailureType(to: Error.self)
+            .eraseToAnyPublisher()
+    }
+}
+
 struct GetFailureMockedArticlesUseCase: GetArticlesUseCase {
     
     func getArticles() -> AnyPublisher<[Article], Error> {

@@ -32,6 +32,5 @@ class ArticlesViewModel: ObservableObject {
                 articleViewModels = viewModels
             }
             .store(in: &cancellables)
-
     }
 }

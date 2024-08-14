@@ -23,6 +23,10 @@
 		038CF4F92C6B992B009C9747 /* PopularArticlesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4F82C6B992B009C9747 /* PopularArticlesRepository.swift */; };
 		038CF4FE2C6BAE55009C9747 /* NetworkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4FD2C6BAE55009C9747 /* NetworkData.swift */; };
 		038CF5002C6BB33C009C9747 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4FF2C6BB33C009C9747 /* NetworkAPI.swift */; };
+		038CF5062C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF5052C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift */; };
+		038CF50A2C6BF528009C9747 /* GetSuccessMockedArticlesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF5092C6BF528009C9747 /* GetSuccessMockedArticlesUseCase.swift */; };
+		038CF50C2C6BF70A009C9747 /* ArticlesViewModelFailureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF50B2C6BF70A009C9747 /* ArticlesViewModelFailureTest.swift */; };
+		038CF50E2C6BF72C009C9747 /* GetFailureMockedArticlesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF50D2C6BF72C009C9747 /* GetFailureMockedArticlesUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		038CF4F82C6B992B009C9747 /* PopularArticlesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularArticlesRepository.swift; sourceTree = "<group>"; };
 		038CF4FD2C6BAE55009C9747 /* NetworkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkData.swift; sourceTree = "<group>"; };
 		038CF4FF2C6BB33C009C9747 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		038CF5052C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModelSuccessTest.swift; sourceTree = "<group>"; };
+		038CF5092C6BF528009C9747 /* GetSuccessMockedArticlesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSuccessMockedArticlesUseCase.swift; sourceTree = "<group>"; };
+		038CF50B2C6BF70A009C9747 /* ArticlesViewModelFailureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModelFailureTest.swift; sourceTree = "<group>"; };
+		038CF50D2C6BF72C009C9747 /* GetFailureMockedArticlesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFailureMockedArticlesUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				038CF4CB2C6B69A2009C9747 /* NYTimesTests.swift */,
+				038CF5022C6BE537009C9747 /* Domain */,
+				038CF5012C6BE52E009C9747 /* Presentation */,
 			);
 			path = NYTimesTests;
 			sourceTree = "<group>";
@@ -226,6 +236,32 @@
 				038CF4FD2C6BAE55009C9747 /* NetworkData.swift */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		038CF5012C6BE52E009C9747 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				038CF5052C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift */,
+				038CF50B2C6BF70A009C9747 /* ArticlesViewModelFailureTest.swift */,
+				038CF5082C6BF508009C9747 /* Mocked */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		038CF5022C6BE537009C9747 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		038CF5082C6BF508009C9747 /* Mocked */ = {
+			isa = PBXGroup;
+			children = (
+				038CF5092C6BF528009C9747 /* GetSuccessMockedArticlesUseCase.swift */,
+				038CF50D2C6BF72C009C9747 /* GetFailureMockedArticlesUseCase.swift */,
+			);
+			path = Mocked;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +413,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				038CF4CC2C6B69A2009C9747 /* NYTimesTests.swift in Sources */,
+				038CF50E2C6BF72C009C9747 /* GetFailureMockedArticlesUseCase.swift in Sources */,
+				038CF50C2C6BF70A009C9747 /* ArticlesViewModelFailureTest.swift in Sources */,
+				038CF50A2C6BF528009C9747 /* GetSuccessMockedArticlesUseCase.swift in Sources */,
+				038CF5062C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,8 +633,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.NYTimes.NYTimesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTimes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NYTimes";
 			};
 			name = Debug;
@@ -611,8 +655,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.NYTimes.NYTimesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTimes.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NYTimes";
 			};
 			name = Release;
@@ -627,8 +675,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.NYTimes.NYTimesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NYTimes;
 			};
 			name = Debug;
@@ -643,8 +695,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.apps.NYTimes.NYTimesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NYTimes;
 			};
 			name = Release;

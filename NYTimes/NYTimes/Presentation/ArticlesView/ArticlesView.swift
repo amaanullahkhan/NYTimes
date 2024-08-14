@@ -16,6 +16,7 @@ struct ArticlesView: View {
             List(viewModel.articleViewModels) { articleViewModel in
                 ArticleView(viewModel: articleViewModel)
             }
+            .scrollIndicators(.hidden)
             .navigationTitle(viewModel.title)
         }
         .task {

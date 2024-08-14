@@ -21,7 +21,7 @@ extension ArticleViewModel {
         id = article.id
         title = article.title
         description = article.description
-        publishDate = article.publishedDate.formatted()
+        publishDate = article.publishedDate.formatted(date: .abbreviated, time: .omitted)
         imageUrl = article.imageURL
     }
 }

@@ -39,5 +39,5 @@ struct ArticleView: View {
 }
 
 #Preview {
-    ArticleView(viewModel: ArticleViewModel(id: 1, title: "Title", description: "Description ", publishDate: "14 Aug", imageUrl: URL(string: "https://picsum.photos/200")))
+    ArticleView(viewModel: ArticleViewModel(article: Article(id: 1, title: "Title", description: "Description", publishedDate: Date(), publishedBy: "Author", media: [])))
 }

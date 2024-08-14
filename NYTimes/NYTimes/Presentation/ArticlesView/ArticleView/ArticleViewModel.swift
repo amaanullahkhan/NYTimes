@@ -9,19 +9,19 @@ import Foundation
 
 struct ArticleViewModel: Identifiable {
     
-    var id: Int
+    let id: Int
     let title: String
     let description: String
     let publishDate: String
     let imageUrl: URL?
-}
-
-extension ArticleViewModel {
+    let article: Article
+    
     init(article: Article) {
         id = article.id
         title = article.title
         description = article.description
         publishDate = article.publishedDate.formatted(date: .abbreviated, time: .omitted)
         imageUrl = article.imageURL
+        self.article = article
     }
 }

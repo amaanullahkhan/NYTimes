@@ -14,7 +14,9 @@ struct ArticlesView: View {
     var body: some View {
         NavigationView {
             List(viewModel.articleViewModels) { articleViewModel in
-                ArticleView(viewModel: articleViewModel)
+                NavigationLink(destination: ArticleDetailsView(viewModel: ArticleDetailsViewModel(article: articleViewModel.article))) {
+                    ArticleView(viewModel: articleViewModel)
+                }
             }
             .scrollIndicators(.hidden)
             .navigationTitle(viewModel.title)

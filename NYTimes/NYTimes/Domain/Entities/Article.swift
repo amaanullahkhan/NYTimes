@@ -27,18 +27,30 @@ struct Article: Decodable {
 }
 
 extension Article {
+    
     var imageURL: URL? {
         media.first?.mediaMetadata.first?.url
+    }
+    
+    var largeImageURL: URL? {
+        media.first?.mediaMetadata.last?.url
+    }
+    
+    var imageCaption: String? {
+        media.first?.caption
     }
 }
 
 struct Media: Decodable {
-    var mediaMetadata: [MetaData]
+    let mediaMetadata: [MetaData]
+    let caption: String
+    
     enum CodingKeys: String, CodingKey {
         case mediaMetadata = "media-metadata"
+        case caption
     }
 }
 
 struct MetaData: Decodable {
-    var url: URL
+    let url: URL
 }

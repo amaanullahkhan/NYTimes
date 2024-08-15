@@ -26,4 +26,5 @@ enum NetworkAPI {
     enum URLs {
         static let baseURL = URL(string: "https://api.nytimes.com/")!
     }
+    
 }

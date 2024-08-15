@@ -30,7 +30,7 @@ struct URLSessionNetworkRequestManager: NetworkRequestManager {
             .tryMap() { element -> Data in
                 guard let httpResponse = element.response as? HTTPURLResponse,
                     httpResponse.statusCode == 200 else {
-                        throw URLError(.badServerResponse)
+                    throw NetworkError.somethingWentWrong
                     }
                 return element.data
                 }

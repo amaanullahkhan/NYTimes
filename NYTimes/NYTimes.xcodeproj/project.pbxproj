@@ -38,6 +38,7 @@
 		03C7298C2C6C83D90061D573 /* Articles+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7298B2C6C83D90061D573 /* Articles+TestData.swift */; };
 		03C7298F2C6CAC1D0061D573 /* ArticleDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7298E2C6CAC1D0061D573 /* ArticleDetailsView.swift */; };
 		03C729912C6CACBD0061D573 /* ArticleDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C729902C6CACBD0061D573 /* ArticleDetailsViewModel.swift */; };
+		03DE052D2C6E84D9004FF2A8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DE052C2C6E84D9004FF2A8 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		03C7298B2C6C83D90061D573 /* Articles+TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Articles+TestData.swift"; sourceTree = "<group>"; };
 		03C7298E2C6CAC1D0061D573 /* ArticleDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsView.swift; sourceTree = "<group>"; };
 		03C729902C6CACBD0061D573 /* ArticleDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewModel.swift; sourceTree = "<group>"; };
+		03DE052C2C6E84D9004FF2A8 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 				036EAB3D2C6DE68C009E82E8 /* NetworkRoutable.swift */,
 				036EAB3F2C6DFAB9009E82E8 /* NetworkRequest.swift */,
 				038CF4FD2C6BAE55009C9747 /* NetworkRequestManager.swift */,
+				03DE052C2C6E84D9004FF2A8 /* NetworkError.swift */,
 				036EAB412C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift */,
 			);
 			path = Infrastructure;
@@ -485,6 +488,7 @@
 				036EAB3E2C6DE68C009E82E8 /* NetworkRoutable.swift in Sources */,
 				036EAB402C6DFAB9009E82E8 /* NetworkRequest.swift in Sources */,
 				038CF4E52C6B7092009C9747 /* ArticlesViewModel.swift in Sources */,
+				03DE052D2C6E84D9004FF2A8 /* NetworkError.swift in Sources */,
 				038CF4FE2C6BAE55009C9747 /* NetworkRequestManager.swift in Sources */,
 				038CF4F32C6B8AFA009C9747 /* GetPopularArticlesUseCase.swift in Sources */,
 			);

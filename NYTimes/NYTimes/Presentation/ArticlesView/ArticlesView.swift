@@ -19,9 +19,10 @@ struct ArticlesView: View {
                 }
             }
             .overlay(content: {
-                if viewModel.isError {
+                if let errorMessage = viewModel.errorMessage {
                     VStack {
-                        Text(viewModel.errorMessage)
+                        Text(errorMessage)
+                            .multilineTextAlignment(.center)
                         Button {
                             viewModel.retry()
                         } label: {

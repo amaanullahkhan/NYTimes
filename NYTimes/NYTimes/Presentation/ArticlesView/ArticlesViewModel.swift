@@ -10,7 +10,7 @@ import Combine
 
 class ArticlesViewModel: ObservableObject {
     
-    let title: String = "Most Popular"
+    let title: String = Localizable.mostPopular
     
     @Published
     private(set) var articleViewModels: [ArticleViewModel] = []

@@ -51,5 +51,5 @@ struct ArticlesView: View {
 }
 
 #Preview {
-    ArticlesView()
+    ArticlesView(viewModel: ArticlesViewModel())
 }

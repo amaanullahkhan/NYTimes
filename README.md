@@ -1,4 +1,5 @@
 # NYTimes Articles
+An iOS app displaying NYTimes Popular Articles using SwiftUI and Clean architecture.
 
 ## Build and Runtime Requirements
 + Swift 5.0

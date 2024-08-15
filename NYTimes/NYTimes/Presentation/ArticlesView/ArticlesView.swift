@@ -12,9 +12,11 @@ struct ArticlesView: View {
     @StateObject private var viewModel: ArticlesViewModel = ArticlesViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(viewModel.articleViewModels) { articleViewModel in
-                NavigationLink(destination: ArticleDetailsView(viewModel: articleViewModel.makeArticleDetailsViewModel())) {
+                NavigationLink {
+                    ArticleDetailsView(viewModel: articleViewModel.makeArticleDetailsViewModel())
+                } label: {
                     ArticleView(viewModel: articleViewModel)
                 }
             }

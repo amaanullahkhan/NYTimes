@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ArticlesView: View {
     
-    @StateObject private var viewModel: ArticlesViewModel = ArticlesViewModel()
+    @ObservedObject var viewModel: ArticlesViewModel
     
     var body: some View {
         NavigationStack {

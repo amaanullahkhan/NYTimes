@@ -18,8 +18,28 @@ struct ArticlesView: View {
                     ArticleView(viewModel: articleViewModel)
                 }
             }
+            .overlay(content: {
+                if viewModel.isError {
+                    VStack {
+                        Text(viewModel.errorMessage)
+                        Button {
+                            viewModel.retry()
+                        } label: {
+                            Text(viewModel.retryActionTitle)
+                        }
+                    }
+                }
+            })
+            .overlay(content: {
+                if viewModel.isLoading {
+                    ProgressView()
+                }
+            })
             .scrollIndicators(.hidden)
             .navigationTitle(viewModel.title)
+            .refreshable {
+                viewModel.refresh()
+            }
         }
         .task {
             viewModel.getArticles()

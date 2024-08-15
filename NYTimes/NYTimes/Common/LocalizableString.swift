@@ -16,8 +16,12 @@ private extension String {
 enum Localizable {
     
     static let mostPopular = Key.mostPopular.localised
+    static let retry = Key.retry.localised
+    static let somethingWentWrong = Key.somethingWentWrong.localised
     
     private enum Key {
         static let mostPopular = "most_popular"
+        static let retry = "retry"
+        static let somethingWentWrong = "something_went_wrong"
     }
 }

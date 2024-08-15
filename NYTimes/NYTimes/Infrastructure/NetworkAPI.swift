@@ -25,12 +25,5 @@ enum NetworkAPI {
     
     enum URLs {
         static let baseURL = URL(string: "https://api.nytimes.com/")!
-        static let popularArticlesURL = baseURL.appendingPathComponent("\(Constant.svc)/\(Constant.mostpopular)/\(Constant.v2)/\(Constant.mostviewed)/\(Constant.allSections)/\(Constant.jsonVersion)")
-    }
-    
-    enum Routes {
-        struct MostPopularArticles: NetworkReadable {
-            var route = NetworkAPI.URLs.popularArticlesURL
-        }
     }
 }

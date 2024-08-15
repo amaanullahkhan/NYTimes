@@ -7,21 +7,35 @@
 
 import Foundation
 
+typealias Parameters = [String : String]
+
+enum HTTPMethod: String {
+    case get = "GET"
+    case post = "POST"
+}
+
 protocol URLRequestConvertable {
     func asURLRequest() -> URLRequest
 }
 
-struct NetworkRequest: URLRequestConvertable {
-    
-    var method: HTTPMethod
-    var route: URL
-    var parameters: Parameters = [:]
+protocol NetworkRequest: URLRequestConvertable {
+    var method: HTTPMethod { get }
+    var route: URL { get }
+    var queryParams: Parameters? { get }
+    var bodyParam: Encodable? { get }
+}
+
+extension NetworkRequest {
     
     func asURLRequest() -> URLRequest {
-        let queryParams = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
-        let url = route.appending(queryItems: queryParams)
-        var urlRequest = URLRequest(url: url)
+        var urlRequest = URLRequest(url: route)
         urlRequest.httpMethod = method.rawValue
+        if let queryParams {
+            urlRequest.url?.append(queryItems: queryParams.map { URLQueryItem(name: $0.key, value: $0.value) })
+        }
+        if let bodyParam, let data = try? JSONEncoder().encode(bodyParam) {
+            urlRequest.httpBody = data
+        }
         return urlRequest
     }
 }

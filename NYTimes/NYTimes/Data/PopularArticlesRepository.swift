@@ -17,8 +17,7 @@ struct PopularArticlesRepository: ArticlesRepository {
     }
     
     func fetchArticles() -> AnyPublisher<[Article], Error> {
-        let params = [NetworkAPI.Constant.apiKey: NetworkAPI.Key.apiKey]
-        let mostPopularRequest = NetworkAPI.Routes.MostPopularArticles.get(parameters: params)
+        let mostPopularRequest = NetworkRoute.ArticleRoute.mostPopularArticles
         let response: AnyPublisher<PopularArticlesResponse, Error>
         response = manager.perform(request: mostPopularRequest)
         return response.map(\.results).eraseToAnyPublisher()

@@ -7,38 +7,42 @@
 
 import Foundation
 
-typealias Parameters = [String : String]
+typealias Constant = NetworkAPI.Constant
 
-enum HTTPMethod: String {
-    case get = "GET"
-    case post = "POST"
-}
-
-protocol NetworkRoutable {
-    var route: URL { get }
-    init()
-}
-
-/// Allows to perform the `.get` method
-protocol NetworkReadable: NetworkRoutable { }
-
-extension NetworkReadable {
-    
-    static func get(parameters: Parameters = [:]) -> URLRequestConvertable {
-        let readable = Self.init()
-        let route = readable.route
-        return NetworkRequest(method: .get, route: route, parameters: parameters)
+enum NetworkRoute {
+        
+    enum ArticleRoute: NetworkRequest {
+                
+        case mostPopularArticles
+        
+        var method: HTTPMethod {
+            switch self {
+            case .mostPopularArticles:
+                .get
+            }
+        }
+        
+        var route: URL {
+            switch self {
+            case .mostPopularArticles:
+                NetworkAPI.URLs.baseURL.appendingPathComponent("\(Constant.svc)/\(Constant.mostpopular)/\(Constant.v2)/\(Constant.mostviewed)/\(Constant.allSections)/\(Constant.jsonVersion)")
+            }
+        }
+        
+        var queryParams: Parameters? {
+            switch self {
+            case .mostPopularArticles:
+                [NetworkAPI.Constant.apiKey: NetworkAPI.Key.apiKey]
+            }
+        }
+        
+        var bodyParam: Encodable? {
+            switch self {
+            case .mostPopularArticles:
+                nil
+            }
+        }
+        
     }
 }
 
-/// Allows to perform the `.post` method
-protocol NetworkPostable: NetworkRoutable {}
-
-extension NetworkPostable {
-    
-    static func post(parameters: Parameters = [:]) -> URLRequestConvertable {
-        let postable = Self.init()
-        let route = postable.route
-        return NetworkRequest(method: .post, route: route, parameters: parameters)
-    }
-}

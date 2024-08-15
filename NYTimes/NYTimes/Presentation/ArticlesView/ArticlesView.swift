@@ -9,19 +9,22 @@ import SwiftUI
 
 struct ArticlesView: View {
     
-    @StateObject private var viewModel: ArticlesViewModel = ArticlesViewModel()
+    @ObservedObject var viewModel: ArticlesViewModel
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(viewModel.articleViewModels) { articleViewModel in
-                NavigationLink(destination: ArticleDetailsView(viewModel: articleViewModel.makeArticleDetailsViewModel())) {
+                NavigationLink {
+                    ArticleDetailsView(viewModel: articleViewModel.makeArticleDetailsViewModel())
+                } label: {
                     ArticleView(viewModel: articleViewModel)
                 }
             }
             .overlay(content: {
-                if viewModel.isError {
+                if let errorMessage = viewModel.errorMessage {
                     VStack {
-                        Text(viewModel.errorMessage)
+                        Text(errorMessage)
+                            .multilineTextAlignment(.center)
                         Button {
                             viewModel.retry()
                         } label: {
@@ -48,5 +51,5 @@ struct ArticlesView: View {
 }
 
 #Preview {
-    ArticlesView()
+    ArticlesView(viewModel: ArticlesViewModel())
 }

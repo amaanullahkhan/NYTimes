@@ -12,13 +12,12 @@ class ArticlesViewModel: ObservableObject {
     
     let title: String = Localizable.mostPopular
     let retryActionTitle: String = Localizable.retry
-    let errorMessage: String = Localizable.somethingWentWrong
+    
+    @Published
+    private(set) var errorMessage: String?
     
     @Published
     private(set) var isLoading: Bool = false
-    
-    @Published
-    private(set) var isError: Bool = false
     
     @Published
     private(set) var articleViewModels: [ArticleViewModel] = []
@@ -32,14 +31,14 @@ class ArticlesViewModel: ObservableObject {
     
     func getArticles() {
         isLoading = true
-        isError = false
+        errorMessage = nil
         cancellable = useCase.getArticles()
             .map { $0.map { ArticleViewModel(article: $0) } }
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] completion in
                 isLoading = false
-                if case .failure = completion {
-                    isError = true
+                if case .failure(let error) = completion {
+                    errorMessage = error.localizedDescription
                 }
             } receiveValue: { [unowned self] viewModels in
                 isLoading = false

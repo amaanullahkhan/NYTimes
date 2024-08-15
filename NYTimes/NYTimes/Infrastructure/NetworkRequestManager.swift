@@ -8,30 +8,25 @@
 import Foundation
 import Combine
 
-protocol NetworkData {
-    func fetch<T: Decodable>(from url: URL) -> AnyPublisher<T, Error>
+protocol NetworkRequestManager {
+    func perform<T: Decodable>(request requestConvertable: URLRequestConvertable) -> AnyPublisher<T, Error>
 }
 
-struct URLSessionNetworkData: NetworkData {
+struct URLSessionNetworkRequestManager: NetworkRequestManager {
     
     private let session: URLSession
+    private let jsonDecoder: JSONDecoder
     
-    private let jsonDecoder: JSONDecoder = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(dateFormatter)
-        return decoder
-    }()
-    
-    init(session: URLSession = URLSession.shared) {
+    init(session: URLSession = URLSession.shared,
+         jsonDecoder: JSONDecoder = JSONDecoder.formattedDateDecoder) {
         self.session = session
+        self.jsonDecoder = jsonDecoder
     }
     
-    func fetch<T: Decodable>(from url: URL) -> AnyPublisher<T, Error> {
+    func perform<T: Decodable>(request requestConvertable: URLRequestConvertable) -> AnyPublisher<T, Error> {
         URLSession
             .shared
-            .dataTaskPublisher(for: url)
+            .dataTaskPublisher(for: requestConvertable.asURLRequest())
             .tryMap() { element -> Data in
                 guard let httpResponse = element.response as? HTTPURLResponse,
                     httpResponse.statusCode == 200 else {

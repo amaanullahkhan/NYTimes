@@ -9,11 +9,28 @@ import Foundation
 
 enum NetworkAPI {
 
-    static let key = "KDTgsLu7iqIYYjrTc1hHxNvtFkjlhO6f"
+    enum Constant {
+        static let v2 = "v2"
+        static let svc = "svc"
+        static let apiKey = "api-key"
+        static let mostpopular = "mostpopular"
+        static let mostviewed = "mostviewed"
+        static let allSections = "all-sections"
+        static let jsonVersion = "7.json"
+    }
     
-    static let baseURL = URL(string: "https://api.nytimes.com/")!
+    enum Key {
+        static let apiKey = "KDTgsLu7iqIYYjrTc1hHxNvtFkjlhO6f"
+    }
     
-    static let popularArticlesURL: URL = baseURL
-        .appendingPathComponent("svc/mostpopular/v2/mostviewed/all-sections/7.json")
-        .appending(queryItems: [URLQueryItem(name: "api-key", value: key)])
+    enum URLs {
+        static let baseURL = URL(string: "https://api.nytimes.com/")!
+        static let popularArticlesURL = baseURL.appendingPathComponent("\(Constant.svc)/\(Constant.mostpopular)/\(Constant.v2)/\(Constant.mostviewed)/\(Constant.allSections)/\(Constant.jsonVersion)")
+    }
+    
+    enum Routes {
+        struct MostPopularArticles: NetworkReadable {
+            var route = NetworkAPI.URLs.popularArticlesURL
+        }
+    }
 }

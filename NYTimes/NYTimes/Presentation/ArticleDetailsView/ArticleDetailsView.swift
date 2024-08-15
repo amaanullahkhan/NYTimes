@@ -55,7 +55,7 @@ struct ArticleDetailsView: View {
                         .padding(.horizontal, 8)
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)        
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

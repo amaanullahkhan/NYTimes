@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		035E49CD2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E49CC2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift */; };
+		036EAB3E2C6DE68C009E82E8 /* NetworkRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EAB3D2C6DE68C009E82E8 /* NetworkRoutable.swift */; };
+		036EAB402C6DFAB9009E82E8 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EAB3F2C6DFAB9009E82E8 /* NetworkRequest.swift */; };
+		036EAB422C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EAB412C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift */; };
 		038CF4BA2C6B69A1009C9747 /* NYTimesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4B92C6B69A1009C9747 /* NYTimesApp.swift */; };
 		038CF4BC2C6B69A1009C9747 /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4BB2C6B69A1009C9747 /* ArticlesView.swift */; };
 		038CF4BE2C6B69A2009C9747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 038CF4BD2C6B69A2009C9747 /* Assets.xcassets */; };
@@ -22,7 +25,7 @@
 		038CF4F32C6B8AFA009C9747 /* GetPopularArticlesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4F22C6B8AFA009C9747 /* GetPopularArticlesUseCase.swift */; };
 		038CF4F72C6B97C8009C9747 /* ArticlesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4F62C6B97C8009C9747 /* ArticlesRepository.swift */; };
 		038CF4F92C6B992B009C9747 /* PopularArticlesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4F82C6B992B009C9747 /* PopularArticlesRepository.swift */; };
-		038CF4FE2C6BAE55009C9747 /* NetworkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4FD2C6BAE55009C9747 /* NetworkData.swift */; };
+		038CF4FE2C6BAE55009C9747 /* NetworkRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4FD2C6BAE55009C9747 /* NetworkRequestManager.swift */; };
 		038CF5002C6BB33C009C9747 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF4FF2C6BB33C009C9747 /* NetworkAPI.swift */; };
 		038CF5062C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF5052C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift */; };
 		038CF50A2C6BF528009C9747 /* GetMockedArticlesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038CF5092C6BF528009C9747 /* GetMockedArticlesUseCase.swift */; };
@@ -54,6 +57,9 @@
 /* Begin PBXFileReference section */
 		035E49CC2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		035E49D42C6CFD95009E37A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		036EAB3D2C6DE68C009E82E8 /* NetworkRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRoutable.swift; sourceTree = "<group>"; };
+		036EAB3F2C6DFAB9009E82E8 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		036EAB412C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+DateFormatter.swift"; sourceTree = "<group>"; };
 		038CF4B62C6B69A1009C9747 /* NYTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038CF4B92C6B69A1009C9747 /* NYTimesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesApp.swift; sourceTree = "<group>"; };
 		038CF4BB2C6B69A1009C9747 /* ArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
@@ -72,7 +78,7 @@
 		038CF4F22C6B8AFA009C9747 /* GetPopularArticlesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPopularArticlesUseCase.swift; sourceTree = "<group>"; };
 		038CF4F62C6B97C8009C9747 /* ArticlesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRepository.swift; sourceTree = "<group>"; };
 		038CF4F82C6B992B009C9747 /* PopularArticlesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularArticlesRepository.swift; sourceTree = "<group>"; };
-		038CF4FD2C6BAE55009C9747 /* NetworkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkData.swift; sourceTree = "<group>"; };
+		038CF4FD2C6BAE55009C9747 /* NetworkRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestManager.swift; sourceTree = "<group>"; };
 		038CF4FF2C6BB33C009C9747 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
 		038CF5052C6BE572009C9747 /* ArticlesViewModelSuccessTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModelSuccessTest.swift; sourceTree = "<group>"; };
 		038CF5092C6BF528009C9747 /* GetMockedArticlesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMockedArticlesUseCase.swift; sourceTree = "<group>"; };
@@ -264,7 +270,10 @@
 			isa = PBXGroup;
 			children = (
 				038CF4FF2C6BB33C009C9747 /* NetworkAPI.swift */,
-				038CF4FD2C6BAE55009C9747 /* NetworkData.swift */,
+				036EAB3D2C6DE68C009E82E8 /* NetworkRoutable.swift */,
+				036EAB3F2C6DFAB9009E82E8 /* NetworkRequest.swift */,
+				038CF4FD2C6BAE55009C9747 /* NetworkRequestManager.swift */,
+				036EAB412C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -444,9 +453,12 @@
 				038CF5002C6BB33C009C9747 /* NetworkAPI.swift in Sources */,
 				038CF4BA2C6B69A1009C9747 /* NYTimesApp.swift in Sources */,
 				038CF4F72C6B97C8009C9747 /* ArticlesRepository.swift in Sources */,
+				036EAB422C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift in Sources */,
 				03C7298F2C6CAC1D0061D573 /* ArticleDetailsView.swift in Sources */,
+				036EAB3E2C6DE68C009E82E8 /* NetworkRoutable.swift in Sources */,
+				036EAB402C6DFAB9009E82E8 /* NetworkRequest.swift in Sources */,
 				038CF4E52C6B7092009C9747 /* ArticlesViewModel.swift in Sources */,
-				038CF4FE2C6BAE55009C9747 /* NetworkData.swift in Sources */,
+				038CF4FE2C6BAE55009C9747 /* NetworkRequestManager.swift in Sources */,
 				038CF4F32C6B8AFA009C9747 /* GetPopularArticlesUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

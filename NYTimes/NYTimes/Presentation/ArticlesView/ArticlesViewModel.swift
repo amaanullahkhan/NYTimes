@@ -26,8 +26,8 @@ class ArticlesViewModel: ObservableObject {
         useCase.getArticles()
             .map { $0.map { ArticleViewModel(article: $0) } }
             .receive(on: DispatchQueue.main)
-            .sink { _ in
-                
+            .sink { completion in
+                print(completion)
             } receiveValue: { [unowned self] viewModels in
                 articleViewModels = viewModels
             }

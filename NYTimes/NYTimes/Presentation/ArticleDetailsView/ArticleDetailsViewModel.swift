@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArticleDetailsViewModel: Identifiable {
+struct ArticleDetailsViewModel {
     
     let id: Int
     let title: String

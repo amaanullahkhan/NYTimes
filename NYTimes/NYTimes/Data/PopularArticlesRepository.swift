@@ -10,16 +10,17 @@ import Combine
 
 struct PopularArticlesRepository: ArticlesRepository {
     
-    let networkData: NetworkData
+    let manager: NetworkRequestManager
     
-    init(networkData: NetworkData = URLSessionNetworkData()) {
-        self.networkData = networkData
+    init(manager: NetworkRequestManager = URLSessionNetworkRequestManager()) {
+        self.manager = manager
     }
     
     func fetchArticles() -> AnyPublisher<[Article], Error> {
-        let url = NetworkAPI.popularArticlesURL
+        let params = [NetworkAPI.Constant.apiKey: NetworkAPI.Key.apiKey]
+        let mostPopularRequest = NetworkAPI.Routes.MostPopularArticles.get(parameters: params)
         let response: AnyPublisher<PopularArticlesResponse, Error>
-        response = networkData.fetch(from: url)
+        response = manager.perform(request: mostPopularRequest)
         return response.map(\.results).eraseToAnyPublisher()
     }
 }

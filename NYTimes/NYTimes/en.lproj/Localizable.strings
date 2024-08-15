@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  NYTimes
+
+  Created by Amaan Ullah on 15/08/2024.
+  
+*/
+
+"most_popular" = "Most Popular";
+"retry" = "Retry";
+"something_went_wrong" = "Something went wrong";

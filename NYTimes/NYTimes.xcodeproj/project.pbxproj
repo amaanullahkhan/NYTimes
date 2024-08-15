@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		035E49CD2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E49CC2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift */; };
-		036EAB3E2C6DE68C009E82E8 /* NetworkRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EAB3D2C6DE68C009E82E8 /* NetworkRoutable.swift */; };
+		036EAB3E2C6DE68C009E82E8 /* NetworkRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EAB3D2C6DE68C009E82E8 /* NetworkRoute.swift */; };
 		036EAB402C6DFAB9009E82E8 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EAB3F2C6DFAB9009E82E8 /* NetworkRequest.swift */; };
 		036EAB422C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EAB412C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift */; };
 		036EAB452C6E0474009E82E8 /* LocalizableString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036EAB442C6E0474009E82E8 /* LocalizableString.swift */; };
@@ -61,7 +61,7 @@
 /* Begin PBXFileReference section */
 		035E49CC2C6CE743009E37A7 /* ArticleDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		035E49D42C6CFD95009E37A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		036EAB3D2C6DE68C009E82E8 /* NetworkRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRoutable.swift; sourceTree = "<group>"; };
+		036EAB3D2C6DE68C009E82E8 /* NetworkRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRoute.swift; sourceTree = "<group>"; };
 		036EAB3F2C6DFAB9009E82E8 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		036EAB412C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+DateFormatter.swift"; sourceTree = "<group>"; };
 		036EAB442C6E0474009E82E8 /* LocalizableString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableString.swift; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				038CF4FF2C6BB33C009C9747 /* NetworkAPI.swift */,
-				036EAB3D2C6DE68C009E82E8 /* NetworkRoutable.swift */,
+				036EAB3D2C6DE68C009E82E8 /* NetworkRoute.swift */,
 				036EAB3F2C6DFAB9009E82E8 /* NetworkRequest.swift */,
 				038CF4FD2C6BAE55009C9747 /* NetworkRequestManager.swift */,
 				03DE052C2C6E84D9004FF2A8 /* NetworkError.swift */,
@@ -485,7 +485,7 @@
 				038CF4F72C6B97C8009C9747 /* ArticlesRepository.swift in Sources */,
 				036EAB422C6DFE2B009E82E8 /* JSONDecoder+DateFormatter.swift in Sources */,
 				03C7298F2C6CAC1D0061D573 /* ArticleDetailsView.swift in Sources */,
-				036EAB3E2C6DE68C009E82E8 /* NetworkRoutable.swift in Sources */,
+				036EAB3E2C6DE68C009E82E8 /* NetworkRoute.swift in Sources */,
 				036EAB402C6DFAB9009E82E8 /* NetworkRequest.swift in Sources */,
 				038CF4E52C6B7092009C9747 /* ArticlesViewModel.swift in Sources */,
 				03DE052D2C6E84D9004FF2A8 /* NetworkError.swift in Sources */,
